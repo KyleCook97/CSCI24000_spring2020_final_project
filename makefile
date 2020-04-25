@@ -1,5 +1,5 @@
 Driver.class: Driver.java Critter.class Bug.class Fish.class
-	javac -g Diver.java
+	javac -g Driver.java
 
 Critter.class: Critter.java
 	javac -g Critter.java
@@ -11,7 +11,7 @@ Fish.class: Fish.java Critter.class
 	javac -g Fish.java
 
 clean:
-	rm * .class
+	rm *.class
 
 run: Driver.class
 	java Driver

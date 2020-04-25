@@ -15,7 +15,7 @@ abstract class Driver
         String tempName = "Name";
         String tempLoc = "Place";
         String tempSize = "Size";
-        int tempPrice = "0";
+        int tempPrice = 100;
         String tempToD = "Time";
         String tempToY = "Months";
         boolean tempCaught = false;
@@ -57,7 +57,7 @@ abstract class Driver
                 if (bugRead.hasNextBoolean())
                     tempCaught = bugRead.nextBoolean();
 
-                bugArr.add(new Bug(tempID, tempName, tempLoc, tempPrice, tempToD, tempToY, tempCaught))
+                bugArr.add(new Bug(tempID, tempName, tempLoc, tempPrice, tempToD, tempToY, tempCaught));
             }//end while
         }//end try
         catch (FileNotFoundException e)
@@ -98,7 +98,7 @@ abstract class Driver
                 if (fishRead.hasNextBoolean())
                     tempCaught = fishRead.nextBoolean();
 
-                fishArr.add(new Fish(tempID, tempName, tempLoc, tempPrice, tempToD, tempToY, tempCaught))
+                fishArr.add(new Fish(tempID, tempName, tempLoc, tempSize, tempPrice, tempToD, tempToY, tempCaught));
             }//end while
         }//end try
         catch (FileNotFoundException e)
