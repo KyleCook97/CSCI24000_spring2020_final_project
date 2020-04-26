@@ -10,6 +10,9 @@ Bug.class: Bug.java Critter.class
 Fish.class: Fish.java Critter.class
 	javac -g Fish.java
 
+Menu.class: Menu.java
+	javac -g Menu.java
+	
 clean:
 	rm *.class
 

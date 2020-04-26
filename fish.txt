@@ -77,4 +77,4 @@
 77,Football Fish,Sea,Large,2500,4 p.m. - 9 a.m.,November-March (Northern) / May-September (Southern),false,
 78,Oarfish,Sea,Largest,9000,All day,December-May (Northern) / June-November (Southern),false,
 79,Barreleye,Sea,Small,15000,9 p.m. - 4 a.m.,Year-round (Northern and Southern),false,
-80,Coelacanth,Sea (rainy days),Largest,15000,All day,Year-round (Northern and Southern),false,
+80,Coelacanth,Sea (rainy days),Largest,15000,All day,Year-round (Northern and Southern),true,

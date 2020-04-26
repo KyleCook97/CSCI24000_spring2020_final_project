@@ -26,6 +26,11 @@ abstract class Critter
         caught = Caught;
     }//end overloaded constructor
 
+    public int getID()
+    {
+        return ID;
+    }//end getID()
+
     public String getName()
     {
         return name;
@@ -50,6 +55,22 @@ abstract class Critter
     {
         return ToY;
     }//end getToY()
+
+    public String getCaughtStatus()
+    {
+        String status;
+        if (caught)
+        {
+            status = "Caught";
+            return status;
+        }//end if
+        else
+        {
+            status = "Uncaught";
+            return status;
+        }//end else
+
+    }//end getCaughtStatus()
 
     public boolean getCaught()
     {
