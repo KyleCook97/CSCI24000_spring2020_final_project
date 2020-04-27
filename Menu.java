@@ -14,7 +14,7 @@ public class Menu
     {
         for (int i = 0; i < fishArray.size(); i++)
         {
-            System.out.println(fishArray.get(i).getID() + ". " + fishArray.get(i).getName() + " " + fishArray.get(i).getLoc() + " " + fishArray.get(i).getPrice() + " " + fishArray.get(i).getSize() + " " + fishArray.get(i).getToD() + " " + fishArray.get(i).getToY() + " " + fishArray.get(i).getCaughtStatus());
+            System.out.println(fishArray.get(i).getID() + ". | " + fishArray.get(i).getName() + " | " + fishArray.get(i).getLoc() + " | " + fishArray.get(i).getPrice() + " | " + fishArray.get(i).getSize() + " | " + fishArray.get(i).getToD() + " | " + fishArray.get(i).getToY() + " | " + fishArray.get(i).getCaughtStatus());
         }
     }//end displayFish()
 
@@ -22,7 +22,7 @@ public class Menu
     {
         for (int i = 0; i < bugArray.size(); i++)
         {
-            System.out.println(bugArray.get(i).getID() + ". " + bugArray.get(i).getName() + " " + bugArray.get(i).getLoc() + " " + bugArray.get(i).getPrice() + " " + bugArray.get(i).getToD() + " " + bugArray.get(i).getToY() + " " + bugArray.get(i).getCaughtStatus());
+            System.out.println(bugArray.get(i).getID() + ". | " + bugArray.get(i).getName() + " | " + bugArray.get(i).getLoc() + " | " + bugArray.get(i).getPrice() + " | " + bugArray.get(i).getToD() + " | " + bugArray.get(i).getToY() + " | " + bugArray.get(i).getCaughtStatus());
         }
     }//end displayBugs()
 
@@ -77,13 +77,17 @@ public class Menu
         {
             System.out.println("|------------------------------|");
             System.out.println("| Please make a selection:     |");
+            System.out.println("|                              |");
             System.out.println("| 1.) Display ALL Critters     |");
             System.out.println("| 2.) Display Bugs             |");
             System.out.println("| 3.) Display Fish             |");
+            System.out.println("|                              |");
             System.out.println("| 4.) Display Caught Fish      |");
             System.out.println("| 5.) Catch Fish               |");
+            System.out.println("|                              |");
             System.out.println("| 6.) Display Caught Bugs      |");
             System.out.println("| 7.) Catch Bug                |");
+            System.out.println("|                              |");
             System.out.println("| 8.) Exit                     |");
             System.out.println("|------------------------------|");
 
@@ -111,9 +115,16 @@ public class Menu
             {
                 System.out.print("Enter the ID number of the Fish you would like to catch: ");
                 selection = input.nextInt();
-                fishArray.get(selection - 1).setCaught(caught);
+                if (fishArray.get(selection - 1).getCaught() == false)
+                {
+                    fishArray.get(selection - 1).setCaught(caught);
 
-                System.out.println("Caught: " + fishArray.get(selection - 1).getName());
+                    System.out.println("Caught: " + fishArray.get(selection - 1).getName());
+                }
+                else
+                {
+                    System.out.println("You've already caught a  " + fishArray.get(selection - 1).getName());
+                }
             }
             else if (selection == 6)
             {
@@ -123,9 +134,16 @@ public class Menu
             {
                 System.out.print("Enter the ID number of the Bug you would like to catch: ");
                 selection = input.nextInt();
-                bugArray.get(selection - 1).setCaught(caught);
+                if (bugArray.get(selection - 1).getCaught() == false)
+                {
+                    bugArray.get(selection - 1).setCaught(caught);
 
-                System.out.println("Caught: " + bugArray.get(selection - 1).getName());
+                    System.out.println("Caught: " + bugArray.get(selection - 1).getName());
+                }
+                else
+                {
+                    System.out.println("You've already caught a " + bugArray.get(selection - 1).getName());
+                }
             }
             else if (selection == 8)
             {

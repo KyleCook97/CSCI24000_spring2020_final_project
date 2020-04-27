@@ -20,9 +20,6 @@ abstract class Driver
         String tempToY = "Months";
         boolean tempCaught = false;
 
-        boolean keepGoing = true;
-        int selection;
-
         ArrayList<Bug> bugArr = new ArrayList<>();
         ArrayList<Fish> fishArr = new ArrayList<>();
         Scanner input = new Scanner(System.in);
@@ -110,7 +107,11 @@ abstract class Driver
             e.printStackTrace();
         }//end catch
 
+        ////////////////////////////////////////////////////////////////////////////////////
+
         m.run(bugArr, fishArr);
+
+        ////////////////////////////////////////////////////////////////////////////////////
 
         try
         {
